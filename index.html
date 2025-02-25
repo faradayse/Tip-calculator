@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            padding: 5px;
+            width: 100%;
+            max-width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button-group {
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 20px;
+            margin: 5px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #tip-buttons button {
+            background-color: #007bff;
+            padding: 5px 15px;
+        }
+        #tip-buttons button:hover {
+            background-color: #0056b3;
+        }
+        #reset-btn {
+            background-color: #dc3545;
+        }
+        #reset-btn:hover {
+            background-color: #c82333;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div>
+        <label for="bill-amount">Bill Amount ($):</label>
+        <input type="number" id="bill-amount" placeholder="Enter bill amount" step="0.01">
+    </div>
+    <div>
+        <label for="tip-percentage">Tip Percentage (%):</label>
+        <input type="number" id="tip-percentage" placeholder="Enter tip percentage" step="1">
+    </div>
+    <div id="tip-buttons">
+        <button onclick="setTip(10)">10%</button>
+        <button onclick="setTip(15)">15%</button>
+        <button onclick="setTip(20)">20%</button>
+    </div>
+    <div class="button-group">
+        <button onclick="calculateTip()">Calculate</button>
+        <button id="reset-btn" onclick="resetForm()">Reset</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
