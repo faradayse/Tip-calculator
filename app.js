@@ -27,3 +27,4 @@ function resetForm() {
     document.getElementById("tip-percentage").value = "";
     document.getElementById("result").innerHTML = "";
 }
+
